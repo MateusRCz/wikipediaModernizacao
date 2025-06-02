@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<!-- Corpo -->
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <i class="fa-solid fa-bars fa-xl"></i>
+        <img src="icon/logo.svg" alt="">
+        <div>
+            <h2>Entrar</h2>
+            <img src="icon/person.svg" alt="">
+        </div>
+
+    </header>
+
+    <!-- Conteudo Principal -->
+    <main>
+        <div class="principalWelcome">
+
+            <img style="position: relative; left: -370px " src="icon/logoWiki.svg" alt="">
+
+            <div style="position: absolute;">
+                <h1 style="font-size: 30px;">Boas-vindas à Wikipédia</h1>
+                <h3 style="font-size: 20px; ">a enciclopédia que todos podem editar</h3>
+                <input id="pesquisa" style="width: 428px; height: 30px;" type="text"
+                    placeholder="Pesquisar na Wikipédia">
+                <button onclick="buscar()">Pesquisar</button>
+            </div>
+
+        </div>
+
+        <!-- Categorias de artigos -->
+        <div class="principalCategorias">
+            <div>
+                <img src="icon/art.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/biografia.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/ciencia.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/filosofia.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/geografia.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/historia.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/matematica.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/sociedade.svg" alt="">
+                <h3></h3>
+            </div>
+            <div>
+                <img src="icon/tecnologia.svg" alt="">
+                <h3></h3>
+            </div>
+        </div>
+
+        <!-- Conteúdo de artigos relevantes -->
+        <div>
+            <h2 class="principalArtigosName">Artigos em destaque</h2>
+        </div>
+
+        <!-- Conteúdo de artigos Slider-->
+        <div class="principalArtigosSlider">
+
+            <!-- Botão esquerdo -->
+            <button class="buttonLeft" onclick="esquerda()"><img src="icon/arrow.svg" alt=""></button>
+            
+            <div class="container-slider">
+                <div class="slider">
+                    <img id="image" src="" alt="">
+
+                    <div>
+                        <h1 id="title" style="margin-left: 20px;"></h1>
+                        <p id="text">
+                            <!-- CONTEUDO TEXTUAL-->
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="slider">
+                    <img id="image" src="" alt="">
+
+                    <div>
+                        <h1 id="title" style="margin-left: 20px;"></h1>
+                        <p id="text">
+                            <!-- CONTEUDO TEXTUAL-->
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="slider">
+                    <img id="image" src="" alt="">
+
+                    <div>
+                        <h1 id="title" style="margin-left: 20px;"></h1>
+                        <p id="text">
+                            <!-- CONTEUDO TEXTUAL-->
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Botão direito -->
+            <button class="buttonRight"><img src="icon/arrow.svg" alt=""></button>
+        </div>
+    </main>
+    <script src="index.js" ></script>
+</body>
+
+</html>

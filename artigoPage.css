@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header{
+    display: flex;
+    height: 77px;
+    width: 100%; background-color: #ffff;
+    align-items: center;
+}
+
+header i{
+    padding-left: 10px; 
+    color: #000000;
+}
+
+.headerLogo{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.conteinerInputEnter{
+    display: flex; 
+    justify-content: end; 
+    width: 100%; 
+    padding-right: 40px; 
+    gap: 5px;
+}
+
+.conteinerInputEnter input{
+    width: 223px; 
+    height: 24px; 
+    margin-right: 100px;
+}
+
+main{
+    height: 310px;
+}
+
+.artigoBanner{
+    display: flex; 
+    justify-content: center;
+}
+
+.artigoBanner img{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.artigoBanner h1{
+    top: 50%; left: 22%; 
+    color: #ffff; 
+    font-size: 100px;
+}
+
+.principalArtigo{
+    display: flex; 
+    height: 100%;
+}
+
+.conteinerEsquerdo{
+    border-radius: 5px; 
+    margin: 5px; 
+    border: 1px solid #9E9E9E; 
+    width: 15%; 
+    height: 100%;
+}
+
+.conteudoArtigo{
+    border-radius: 5px; 
+    border: 1px solid #9E9E9E; 
+    width: 70%; 
+    height: 100%;
+}
+
+.conteinerDireito{
+    border-radius: 5px; 
+    margin: 5px; 
+    border: 1px solid #9E9E9E; 
+    width: 15%; 
+    height: 100%;
+}
