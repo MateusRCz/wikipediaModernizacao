@@ -36,6 +36,30 @@ header div{
     background: linear-gradient(to right, #8E8E8E, #000000, #8E8E8E);
 }
 
+.conteinerSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: white;
+}
+
+.conteinerSearch button{
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4px ;
+    border: none;
+}
+
+#pesquisa{
+    width: 428px;
+    height: 30px;
+    border: none;
+    margin: 4px;
+}
+
 .principalCategorias{
     display: flex; 
     justify-content: center; 

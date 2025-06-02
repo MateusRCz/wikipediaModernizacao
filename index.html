@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -33,9 +33,11 @@
             <div style="position: absolute;">
                 <h1 style="font-size: 30px;">Boas-vindas à Wikipédia</h1>
                 <h3 style="font-size: 20px; ">a enciclopédia que todos podem editar</h3>
-                <input id="pesquisa" style="width: 428px; height: 30px;" type="text"
-                    placeholder="Pesquisar na Wikipédia">
-                <button onclick="buscar()">Pesquisar</button>
+                <div class="conteinerSearch">
+                    <input id="pesquisa" type="text"
+                        placeholder="Pesquisar na Wikipédia">
+                    <button onclick="buscar()"><img src="icon/search.svg" alt=""></button>
+                </div>
             </div>
 
         </div>
@@ -90,9 +92,21 @@
 
             <!-- Botão esquerdo -->
             <button class="buttonLeft" onclick="esquerda()"><img src="icon/arrow.svg" alt=""></button>
-            
+
             <div class="container-slider">
                 <div class="slider">
+                    <img id="imageDes" src="" alt="">
+
+                    <div>
+                        <h1 id="titleDes" style="margin-left: 20px;"></h1>
+                        <p id="textDes">
+                            <!-- CONTEUDO TEXTUAL-->
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="slider">
                     <img id="image" src="" alt="">
 
                     <div>
@@ -113,26 +127,14 @@
                             <!-- CONTEUDO TEXTUAL-->
                         </p>
                     </div>
-                    
-                </div>
 
-                <div class="slider">
-                    <img id="image" src="" alt="">
-
-                    <div>
-                        <h1 id="title" style="margin-left: 20px;"></h1>
-                        <p id="text">
-                            <!-- CONTEUDO TEXTUAL-->
-                        </p>
-                    </div>
-                    
                 </div>
             </div>
             <!-- Botão direito -->
             <button class="buttonRight"><img src="icon/arrow.svg" alt=""></button>
         </div>
     </main>
-    <script src="index.js" ></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

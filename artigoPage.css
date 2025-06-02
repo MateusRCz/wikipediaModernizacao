@@ -37,8 +37,27 @@ header i{
 .conteinerInputEnter input{
     width: 223px; 
     height: 24px; 
-    margin-right: 100px;
+    border: none;
 }
+
+.conteinerSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.conteinerSearch button{
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4px ;
+    border: none;
+}
+
 
 main{
     height: 310px;

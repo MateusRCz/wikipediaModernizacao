@@ -1,16 +1,16 @@
-const slider = document.querySelectorAll('.slider');
-const btnPrev = document.getElementById('buttonLeft');
-const btnNext = document.getElementById('buttonRight');
+// const slider = document.querySelectorAll('.slider');
+// const btnPrev = document.getElementById('buttonLeft');
+// const btnNext = document.getElementById('buttonRight');
 
-let currentSlide = 0;
+// let currentSlide = 0;
 
-function hideSlider(){
-  slider.forEach(item => item.classList.remove('on'))
-}
+// function hideSlider(){
+//   slider.forEach(item => item.classList.remove('on'))
+// }
 
-function showSlider(){
-  slider[currentSlide].classList.add('on')
-}
+// function showSlider(){
+//   slider[currentSlide].classList.add('on')
+// }
 
 // btnNext.addEventListener('click', )
 
@@ -29,13 +29,14 @@ async function buscar() {
     document.getElementById('text').innerHTML = pagina.extract;
 
     
-    // if(window.location.pathname.includes("index.html")) {
-    //   localStorage.setItem('titulo', pagina.title);
-    //   localStorage.setItem('imagem', pagina.thumbnail ? pagina.thumbnail.source : '');
-    //   localStorage.setItem('texto', pagina.extract);
-  
-    //   window.location.href = 'artigoPage.html';
-    // }
+    if(window.location.pathname === "/" || window.location.pathname === "") {
+      localStorage.setItem('titulo', pagina.title);
+      localStorage.setItem('imagem', pagina.thumbnail ? pagina.thumbnail.source : '');
+      localStorage.setItem('texto', pagina.extract);
+      
+      window.location.href = 'artigoPage.html';
+      console.log('mudou para outra página')
+    }
      
 
   } catch (error) {
@@ -87,9 +88,9 @@ gerarArtigos()
 function completarConteiner(artigos){
 
 
-  let imagem = document.getElementById('image')
-  let title = document.getElementById('title')
-  let texto = document.getElementById('text')
+  let imagem = document.getElementById('imageDes')
+  let title = document.getElementById('titleDes')
+  let texto = document.getElementById('textDes')
 
   
   imagem.src = artigos[0].image
