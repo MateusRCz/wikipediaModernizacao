@@ -1,18 +1,44 @@
-// const slider = document.querySelectorAll('.slider');
-// const btnPrev = document.getElementById('buttonLeft');
-// const btnNext = document.getElementById('buttonRight');
+const slider = document.querySelectorAll('.slider');
+const btnPrev = document.getElementById('buttonLeft');
+const btnNext = document.getElementById('buttonRight');
 
-// let currentSlide = 0;
+let currentSlide = 0;
 
-// function hideSlider(){
-//   slider.forEach(item => item.classList.remove('on'))
-// }
+function hideSlider(){
+  slider.forEach(item => item.classList.remove('on'))
+}
 
-// function showSlider(){
-//   slider[currentSlide].classList.add('on')
-// }
+function showSlider(){
+  slider[currentSlide].classList.add('on')
+}
 
-// btnNext.addEventListener('click', )
+function nextSlider(){
+  hideSlider()
+  if(currentSlide === slider.length - 1){
+    currentSlide = 0
+    console.log(currentSlide)
+  }else {
+    currentSlide++
+    console.log(currentSlide)
+  }
+  console.log('chama showl')
+  showSlider()
+}
+
+function prevSlider(){
+  hideSlider()
+  if(currentSlide === 0){
+    currentSlide = slider.length -1
+  }else {
+    currentSlide--
+  }
+  showSlider()
+}
+
+console.log(slider)
+
+btnNext.addEventListener('click', () => nextSlider())
+btnPrev.addEventListener('click', () => prevSlider())
 
 async function buscar() {
   try {
@@ -51,7 +77,7 @@ function esquerda(){
 
 
 async function gerarArtigos(){
-  const titulos = ["Telescópio Espacial James Webb", "Tecnologia", "Brasil"];
+  const titulos = ["Telescópio Espacial James Webb", "ENIAC", "Alan Turing"];
 
   let artigos = [];
 
@@ -88,14 +114,31 @@ gerarArtigos()
 function completarConteiner(artigos){
 
 
-  let imagem = document.getElementById('imageDes')
-  let title = document.getElementById('titleDes')
-  let texto = document.getElementById('textDes')
+  let imagem = document.getElementById('image1')
+  let title = document.getElementById('title1')
+  let texto = document.getElementById('text1')
+  
+  let imagem2 = document.getElementById('image2')
+  let title2 = document.getElementById('title2')
+  let texto2 = document.getElementById('text2')
 
+  let imagem3 = document.getElementById('image3')
+  let title3 = document.getElementById('title3')
+  let texto3 = document.getElementById('text3')
   
   imagem.src = artigos[0].image
   title.innerText = artigos[0].title
   texto.innerHTML = artigos[0].text
+
+  // console.log(artigos[2].text)
+
+  imagem2.src = artigos[1].image
+  title2.innerText = artigos[1].title
+  texto2.innerHTML = artigos[1].text
+
+  imagem3.src = artigos[2].image
+  title3.innerText = artigos[2].title
+  texto3.innerHTML = artigos[2].text
 
 }
 

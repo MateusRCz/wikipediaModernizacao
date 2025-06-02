@@ -96,7 +96,7 @@ header div{
     width: 100%;
 }
 
-.buttonLeft{
+#buttonLeft{
     background-color: #838383; 
     width: 50px; 
     height: 100%; 
@@ -104,7 +104,7 @@ header div{
     cursor: pointer
 }
 
-.buttonRight{
+#buttonRight{
     rotate: 180deg;
     background-color: #838383; 
     width: 50px; 
@@ -119,8 +119,8 @@ header div{
     position: absolute;
     max-height: 89%;
     width: 100%;
-    opacity: 1;
-    /* transition: opacity .2s; */
+    opacity: 0;
+    transition: opacity .1s; 
 }
 
 .on {
