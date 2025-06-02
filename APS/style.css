@@ -16,6 +16,11 @@
   --text-color: #000000;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   background-color: var(--fifth-color);
@@ -25,6 +30,7 @@ body {
 
 button {
   border-radius: 5px;
+  color: var(--text-color);
 }
 button > img {
   margin: 4px 0px 0px 0px;
@@ -141,7 +147,7 @@ main {
   cursor: pointer;
 }
 .dropdown button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--third-color);
 }
 .dropdown ul {
   list-style: none;
@@ -152,7 +158,7 @@ main {
   padding: 6px 10px;
 }
 .dropdown ul li:hover {
-  background-color: #f0f0f0;
+  background-color: var(--third-color);
   cursor: pointer;
 }
 .hidden {
