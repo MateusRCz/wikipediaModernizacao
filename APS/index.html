@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr" data-lt-installed="true">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipédia, a enciclopédia livre (Redesenhado)</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="section-user_options">
+            <div class="header-flex-wrapper">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <img src="icones/header/menu-toggle.svg" alt="Menu de Opções de Conteúdo">
+                        <!-- Dropdown: Menu -->
+                        <div id="menu-dropdown" class="dropdown hidden">
+                            <ul>
+                                <li><a href="#">Página principal</a></li>
+                                <li><a href="#">Artigos bons</a></li>
+                                <li><a href="#">Aleatório</a></li>
+                            </ul>
+                        </div>
+                    </button>
+                    <a class="logo" href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal">
+                        <img id="wkp-icon" src="https://pt.wikipedia.org/static/images/icons/wikipedia.png" alt="Logo da Wikipédia">
+                        <span id="wkp-description">
+                            <img src="https://pt.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-fr.svg" alt="Wikipédia" id="wkp-logo">
+                            <img src="https://pt.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-pt.svg" alt="A enciclopédia livre" id="encyclopedia-text">
+                        </span>
+                    </a>
+                </div>
+                <form class="search-form">
+                    <input type="text" placeholder="Pesquisar na Wikipédia">
+                    <button type="submit">
+                        <img src="icones/header/search.svg" alt="Icone de Pesquisa">
+                    </button>
+                </form>
+                <div class="header-right">
+                    <button class="login-btn">
+                        <img src="icones/header/login_user.svg" alt="Botão de Cadastro/Login">
+                        <!-- Dropdown: Login -->
+                        <div id="login-dropdown" class="dropdown hidden">
+                            <ul>
+                                <li><a href="#">Entrar</a></li>
+                                <li><a href="#">Cadastrar</a></li>
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="settings-btn">
+                        <img src="icones/header/menu-settings.svg" alt="Menu de Configurações do Site">
+                    </button>
+                    <div id="settings-dropdown" class="dropdown hidden">
+                            <strong>Tema</strong>
+                            <div class="config-options">
+                            <button class="theme-option" data-theme="auto">Automático</button>
+                            <button class="theme-option" data-theme="light">Claro</button>
+                            <button class="theme-option" data-theme="dark">Escuro</button>
+                            </div>
+                            <strong>Tamanho da fonte</strong>
+                            <div class="config-options">
+                            <button class="font-option" data-size="small">Pequeno</button>
+                            <button class="font-option" data-size="medium">Médio</button>
+                            <button class="font-option" data-size="large">Grande</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="section-bar">
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/art.svg" alt="Link da página de Arte">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/biografia.svg" alt="Link da página de Biografia">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/ciencia.svg" alt="Link da página de Ciência">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/filosofia.svg" alt="Link da página de Filosofia">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/geografia.svg" alt="Link da página de Geografia">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/historia.svg" alt="Link da página de História">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/matematica.svg" alt="Link da página de Matemática">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/sociedade.svg" alt="Link da página de Sociedade">
+            </span></a>
+            <a href="#"><span class="icon">
+                <img src="icones/section-bar/tecnologia.svg" alt="Link da página de Tecnologia">
+            </span></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article class="artigos_destaque">
+                <div class="titulos_destaque">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Oorlogsschip_van_de_Franse_marine_Marine_Francaise_-_le_Jaureguiberry_%28titel_op_object%29%2C_RP-F-F04416.jpg/330px-Oorlogsschip_van_de_Franse_marine_Marine_Francaise_-_le_Jaureguiberry_%28titel_op_object%29%2C_RP-F-F04416.jpg" alt="Jauréguiberry, um conjunto de navios da Marinha Nacional Francesa" id="imagem_destaque">
+                    <h2>Artigo em destaque</h2>
+                </div>
+                <p class="paragrafos_destaque">O <i><b><a href="/wiki/Jaur%C3%A9guiberry_(coura%C3%A7ado)" title="Jauréguiberry (couraçado)" class="links_destaque">Jauréguiberry</a></b></i> foi um <a href="/wiki/Coura%C3%A7ado" title="Couraçado" class="links_destaque">couraçado</a> pré-<a href="/wiki/Dreadnought" title="Dreadnought" class="links_destaque">dreadnought</a> operado pela <a href="/wiki/Marinha_Nacional_Francesa" title="Marinha Nacional Francesa" class="links_destaque">Marinha Nacional Francesa</a> de 1897 a 1919. Sua construção começou em abril de 1891 na <a href="/wiki/Forges_et_chantiers_de_la_M%C3%A9diterran%C3%A9e" title="Forges et chantiers de la Méditerranée" class="links_destaque">Forges et Chantiers de la Méditerranée</a> e foi <a href="/wiki/Botadura" title="Botadura" class="links_destaque">lançado ao mar</a> em outubro de 1893. Ele era membro de um grupo de cinco navios semelhantes entre si, ao lado do <a href="/wiki/Charles_Martel_(coura%C3%A7ado)" title="Charles Martel (couraçado)" class="links_destaque"><i>Charles Martel</i></a>, <a href="/wiki/Carnot_(coura%C3%A7ado)" title="Carnot (couraçado)" class="links_destaque"><i>Carnot</i></a>, <a href="/wiki/Mass%C3%A9na_(coura%C3%A7ado)" title="Masséna (couraçado)" class="links_destaque"><i>Masséna</i></a> e <a href="/wiki/Bouvet_(coura%C3%A7ado)" title="Bouvet (couraçado)" class="links_destaque"><i>Bouvet</i></a>. O <i>Jauréguiberry</i> era armado com uma bateria principal de dois canhões de 305 milímetros montados em duas <a href="/wiki/Torre_de_artilharia" title="Torre de artilharia" class="links_destaque">torres de artilharia</a> únicas e dois canhões de 274 milímetros também em duas torres únicas, tinha um <a href="/wiki/Deslocamento_(n%C3%A1utica)" title="Deslocamento (náutica)" class="links_destaque">deslocamento</a> de mais de doze mil toneladas e conseguia alcançar uma velocidade máxima de dezessete <a href="/wiki/N%C3%B3_(unidade)" title="Nó (unidade)" class="links_destaque">nós</a>.
+                </p>
+                <p class="paragrafos_destaque">Sua carreira foi relativamente tranquila em tempos de paz, com a maior parte de seu serviço em atividades de treinamento no <a href="/wiki/Mar_Mediterr%C3%A2neo" title="Mar Mediterrâneo" class="links_destaque">Mar Mediterrâneo</a>. Sofreu alguns pequenos acidentes, incluindo quatro explosões de torpedos <a href="/wiki/Ar_comprimido" title="Ar comprimido" class="links_destaque">ar comprimido</a>. Ele juntou-se à Esquadra Internacional que interveio em 1897 e 1898 na <a href="/wiki/Estado_de_Creta" title="Estado de Creta" class="links_destaque">revolta grega em Creta</a> contra o domínio do <a href="/wiki/Imp%C3%A9rio_Otomano" title="Império Otomano" class="links_destaque">Império Otomano</a>, durante a <a href="/wiki/Guerra_Greco-Turca_(1897)" title="Guerra Greco-Turca (1897)" class="links_destaque">Guerra Greco-Turca de 1897</a>. Em 1907 foi designado para a Divisão de Reserva, mas continuou a participar de manobras navais. (<b><a href="/wiki/Jaur%C3%A9guiberry_(coura%C3%A7ado)" title="Jauréguiberry (couraçado)" class="links_destaque">Leia mais...</a></b>)
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer>Criado por AYESC (Arthur Ransolin, Ytallo Santos, Eduardo Kuceki Bernal, Marcos Figueredo e Mateus Ribeiro)</footer>
+</body>
+</html>
