@@ -6,6 +6,7 @@
     <title>Wikipédia, a enciclopédia livre (Redesenhado)</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="opcoes_website.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@
                     </a>
                 </div>
                 <form class="search-form">
-                    <input type="text" placeholder="Pesquisar na Wikipédia">
+                    <input type="text" placeholder="Pesquisar na Wikipédia" id="search-box">
                     <button type="submit">
                         <img src="icones/header/search.svg" alt="Icone de Pesquisa">
                     </button>
@@ -56,17 +57,16 @@
                     </button>
                     <div id="settings-dropdown" class="dropdown hidden">
                             <strong>Tema</strong>
-                            <div class="config-options">
-                            <button class="theme-option" data-theme="auto">Automático</button>
-                            <button class="theme-option" data-theme="light">Claro</button>
-                            <button class="theme-option" data-theme="dark">Escuro</button>
-                            </div>
+                            <!-- Tema -->
+                            <button id="tema-automatico">Automático</button>
+                            <button id="tema-claro">Claro</button>
+                            <button id="tema-escuro">Escuro</button>
                             <strong>Tamanho da fonte</strong>
-                            <div class="config-options">
-                            <button class="font-option" data-size="small">Pequeno</button>
-                            <button class="font-option" data-size="medium">Médio</button>
-                            <button class="font-option" data-size="large">Grande</button>
-                            </div>
+                            <!-- Fonte -->
+                            <button id="fonte-pequena">Pequeno</button>
+                            <button id="fonte-media">Médio</button>
+                            <button id="fonte-grande">Grande</button>
+                        </div>
                     </div>
                 </div>
             </div>
