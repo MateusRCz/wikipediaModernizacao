@@ -1,0 +1,80 @@
+/* Reutiliza estilos do cabeçalho e menu lateral de artigoPage.css */
+
+.signup-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 77px); /* Full height minus header height */
+    background-color: #f0f0f0;
+    padding: 20px; /* Adiciona padding para evitar que o conteúdo cole nas bordas em telas pequenas */
+}
+
+.signup-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Um pouco maior que o login para mais campos */
+    text-align: center;
+}
+
+.signup-container h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 32px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: calc(100% - 20px); /* Ajusta para padding interno */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+}
+
+.signup-button {
+    background-color: #28a745; /* Cor verde para registro */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.signup-button:hover {
+    background-color: #218838; /* Escurece no hover */
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - Wikipedia</title>
+    <link rel="stylesheet" href="artigoPage.css"> <link rel="stylesheet" href="profilePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Página Inicial</a>
+    <a href="artigoPage.html">Artigos (Exemplo)</a>
+    <a href="profilePage.html">Meu Perfil</a>
+    <a href="loginPage.html">Entrar / Criar Conta</a> </div>
+
+    <header>
+        <i class="fa-solid fa-bars fa-xl" onclick="openNav()"></i>
+        <div class="headerLogo">
+            <img src="icon/logo.svg" alt="">
+        </div>
+        <div class="conteinerInputEnter">
+            <div class="conteinerSearch">
+                <input id="pesquisa" placeholder="Pesquisar na Wikipedia" type="text">
+                <button onclick="buscar()"><img src="icon/search.svg" alt=""></button>
+            </div>
+            <a href="loginPage.html" class="enter-button">
+                <h2>Entrar</h2>
+                <img src="icon/person.svg" alt="">
+            </a>
+        </div>
+    </header>
+
+    <main class="profile-main">
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/User_icon_-_2022.svg/120px-User_icon_-_2022.svg.png" alt="Foto de Perfil" class="profile-avatar">
+                <h1>Nome do Usuário</h1>
+                <p>Membro desde: Janeiro de 2023</p>
+            </div>
+
+            <div class="profile-section">
+                <h2>Artigos Favoritos</h2>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Webb_telescope_image.jpg/320px-Webb_telescope_image.jpg" alt="Telescópio Espacial James Webb">
+                        <h3>Telescópio Espacial James Webb</h3>
+                        <p>O Telescópio Espacial James Webb (JWST) é um telescópio espacial desenvolvido em colaboração pela NASA, a Agência Espacial Europeia (ESA) e a Agência Espacial Canadense (CSA).</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Solar_Panels_on_Roof.jpg/320px-Solar_Panels_on_Roof.jpg" alt="Energia Renovável">
+                        <h3>Energia Renovável</h3>
+                        <p>A energia renovável é a energia gerada a partir de fontes que se reabastecem naturalmente, como a luz solar, o vento, a chuva, as marés, as ondas e o calor geotérmico.</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/320px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg" alt="Coliseu">
+                        <h3>Coliseu</h3>
+                        <p>O Coliseu, originalmente Anfiteatro Flaviano, é um anfiteatro oval no centro da cidade de Roma, Itália.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Recomendações de Artigos</h2>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/A_young_galaxy_seen_by_JWST.jpg/320px-A_young_galaxy_seen_by_JWST.jpg" alt="Galáxias Distantes">
+                        <h3>Galáxias Distantes</h3>
+                        <p>Descubra as mais novas descobertas sobre galáxias distantes e a formação do universo.</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/AI_supercomputer_concept.jpg/320px-AI_supercomputer_concept.jpg" alt="Inteligência Artificial">
+                        <h3>Inteligência Artificial</h3>
+                        <p>Explore o mundo da inteligência artificial e seu impacto na sociedade moderna.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Artigos Mais Visitados</h2>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Aconcagua.jpg/320px-Aconcagua.jpg" alt="Aconcágua">
+                        <h3>Aconcágua</h3>
+                        <p>O Aconcágua é a montanha mais alta do continente americano, com 6 960,8 metros de altitude.</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Albert_Einstein_Head.jpg/320px-Albert_Einstein_Head.jpg" alt="Albert Einstein">
+                        <h3>Albert Einstein</h3>
+                        <p>Albert Einstein foi um físico teórico que desenvolveu a teoria da relatividade geral, um dos dois pilares da física moderna.</p>
+                    </div>
+                    <div class="article-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Python_logo_and_wordmark.svg/320px-Python_logo_and_wordmark.svg.png" alt="Python (linguagem de programação)">
+                        <h3>Python (linguagem de programação)</h3>
+                        <p>Python é uma linguagem de programação de alto nível, interpretada, de script, orientada a objetos, funcional, de tipagem dinâmica e forte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

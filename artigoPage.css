@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Adicionado para um melhor controle do layout */
 }
 
 body {
@@ -10,34 +11,40 @@ body {
 header{
     display: flex;
     height: 77px;
-    width: 100%; background-color: #ffff;
+    width: 100%;
+    background-color: #ffff;
     align-items: center;
+    position: relative; /* Adicionado para posicionamento do menu */
+    z-index: 50; /* Para garantir que o header fique acima do conteúdo principal */
 }
 
 header i{
-    padding-left: 10px; 
+    padding-left: 10px;
     color: #000000;
+    cursor: pointer; /* Adicionado para indicar que é clicável */
 }
 
 .headerLogo{
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 
 .conteinerInputEnter{
-    display: flex; 
-    justify-content: end; 
-    width: 100%; 
-    padding-right: 40px; 
-    gap: 5px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: 40px;
+    gap: 15px; /* Aumentado o gap para separar o botão de "Entrar" */
+    align-items: center; /* Alinhado verticalmente */
 }
 
 .conteinerInputEnter input{
-    width: 223px; 
-    height: 24px; 
+    width: 223px;
+    height: 24px;
     border: none;
+    padding: 0 5px; /* Adicionado padding para o texto não colar nas bordas */
 }
 
 .conteinerSearch{
@@ -56,54 +63,136 @@ header i{
     align-items: center;
     padding-right: 4px ;
     border: none;
+    cursor: pointer; /* Adicionado para indicar que é clicável */
 }
 
+/* Novo estilo para o botão "Entrar" */
+.enter-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remover sublinhado do link */
+    color: #000000; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer;
+    gap: 5px;
+}
+
+.enter-button h2 {
+    font-size: 1rem; /* Ajuste o tamanho da fonte se necessário */
+    margin: 0; /* Remover margem padrão do h2 */
+}
+
+.enter-button:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
 
 main{
     height: 310px;
+    /* Ajuste conforme necessário, pois o main não deve ter uma altura fixa para ser responsivo */
 }
 
 .artigoBanner{
-    display: flex; 
+    display: flex;
     justify-content: center;
+    position: relative; /* Para posicionar o título sobre a imagem */
+    height: 310px; /* Definindo uma altura para o banner */
+    overflow: hidden; /* Para esconder partes da imagem que ultrapassem a altura */
 }
 
 .artigoBanner img{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir todo o espaço sem distorcer */
+    display: block;
 }
 
 .artigoBanner h1{
-    top: 50%; left: 22%; 
-    color: #ffff; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o título */
+    color: #ffff;
     font-size: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para melhor legibilidade */
+    text-align: center;
+    width: 90%; /* Para garantir que o título não estoure a tela */
 }
 
 .principalArtigo{
-    display: flex; 
-    height: 100%;
+    display: flex;
+    height: 100%; /* Ajuste a altura conforme o conteúdo */
+    padding: 10px; /* Adicionado padding para separar das bordas */
+    gap: 10px; /* Espaçamento entre as colunas */
 }
 
 .conteinerEsquerdo{
-    border-radius: 5px; 
-    margin: 5px; 
-    border: 1px solid #9E9E9E; 
-    width: 15%; 
-    height: 100%;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #9E9E9E;
+    width: 15%;
+    min-height: 200px; /* Altura mínima para visualização */
+    padding: 10px; /* Padding interno */
 }
 
 .conteudoArtigo{
-    border-radius: 5px; 
-    border: 1px solid #9E9E9E; 
-    width: 70%; 
-    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #9E9E9E;
+    width: 70%;
+    min-height: 200px; /* Altura mínima para visualização */
+    padding: 20px; /* Padding interno */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    font-size: 1.1rem;
+    overflow-y: auto; /* Para permitir rolagem se o conteúdo for grande */
 }
 
 .conteinerDireito{
-    border-radius: 5px; 
-    margin: 5px; 
-    border: 1px solid #9E9E9E; 
-    width: 15%; 
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #9E9E9E;
+    width: 15%;
+    min-height: 200px; /* Altura mínima para visualização */
+    padding: 10px; /* Padding interno */
+}
+
+/* Menu Lateral */
+.sidebar {
     height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa; /* Um cinza claro para o fundo do menu */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar a {
+    padding: 15px 25px 15px 35px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #555;
+}
+
+.sidebar .closebtn:hover {
+    color: #000;
 }

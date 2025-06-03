@@ -9,132 +9,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<!-- Corpo -->
-
 <body>
-
-    <!-- Cabeçalho -->
-    <header>
-        <i class="fa-solid fa-bars fa-xl"></i>
-        <img src="icon/logo.svg" alt="">
-        <div>
-            <h2>Entrar</h2>
-            <img src="icon/person.svg" alt="">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Página Inicial</a>
+        <a href="artigoPage.html">Artigos (Exemplo)</a>
+        <a href="profilePage.html">Meu Perfil</a>
+        <a href="loginPage.html">Entrar / Criar Conta</a>
         </div>
 
+    <header>
+        <i class="fa-solid fa-bars fa-xl" onclick="openNav()"></i>
+        <div class="headerLogo">
+            <img src="icon/logo.svg" alt="">
+        </div>
+        <div class="conteinerInputEnter">
+            <div class="conteinerSearch">
+                <input id="pesquisa" type="text" placeholder="Pesquisar na Wikipédia"> <button onclick="buscar()"><img src="icon/search.svg" alt=""></button>
+            </div>
+            <a href="loginPage.html" class="enter-button">
+                <h2>Entrar</h2>
+                <img src="icon/person.svg" alt="">
+            </a>
+        </div>
     </header>
 
-    <!-- Conteudo Principal -->
     <main>
         <div class="principalWelcome">
-
-            <img style="position: relative; left: -370px " src="icon/logoWiki.svg" alt="">
-
-            <div style="position: absolute;">
-                <h1 style="font-size: 30px;">Boas-vindas à Wikipédia</h1>
-                <h3 style="font-size: 20px; ">a enciclopédia que todos podem editar</h3>
+            <img class="logo-wiki-welcome" src="icon/logoWiki.svg" alt="Logo Wikipedia"> <div class="welcome-content"> <h1 style="font-size: 30px;">Boas-vindas à Wikipédia</h1>
+                <h3 style="font-size: 20px;">a enciclopédia que todos podem editar</h3>
                 <div class="conteinerSearch">
-                    <input id="pesquisa" type="text"
-                        placeholder="Pesquisar na Wikipédia">
-                    <button onclick="buscar()"><img src="icon/search.svg" alt=""></button>
-                </div>
+                    <input id="pesquisa-home" type="text" placeholder="Pesquisar na Wikipédia"> <button onclick="buscarHome()"><img src="icon/search.svg" alt=""></button> </div>
             </div>
-
         </div>
 
-        <!-- Categorias de artigos -->
         <div class="principalCategorias">
-            <div>
-                <img src="icon/art.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/biografia.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/ciencia.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/filosofia.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/geografia.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/historia.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/matematica.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/sociedade.svg" alt="">
-                <h3></h3>
-            </div>
-            <div>
-                <img src="icon/tecnologia.svg" alt="">
-                <h3></h3>
-            </div>
+            <div><img src="/icon/art.svg" alt="Ícone Arte"><h3>Arte</h3></div>
+            <div><img src="/icon/biografia.svg" alt="Ícone Biografia"><h3>Biografia</h3></div>
+            <div><img src="/icon/ciencia.svg" alt="Ícone Ciência"><h3>Ciência</h3></div>
+            <div><img src="/icon/filosofia.svg" alt="Ícone Filosofia"><h3>Filosofia</h3></div>
+            <div><img src="/icon/geografia.svg" alt="Ícone Geografia"><h3>Geografia</h3></div>
+            <div><img src="/icon/historia.svg" alt="Ícone História"><h3>História</h3></div>
+            <div><img src="/icon/matematica.svg" alt="Ícone Matemática"><h3>Matemática</h3></div>
+            <div><img src="/icon/sociedade.svg" alt="Ícone Sociedade"><h3>Sociedade</h3></div>
+            <div><img src="/icon/tecnologia.svg" alt="Ícone Tecnologia"><h3>Tecnologia</h3></div>
         </div>
 
-        <!-- Conteúdo de artigos relevantes -->
         <div>
             <h2 class="principalArtigosName">Artigos em destaque</h2>
         </div>
 
-        <!-- Conteúdo de artigos Slider-->
         <div class="principalArtigosSlider">
-
-            <!-- Botão esquerdo -->
-            <button id="buttonLeft"><img src="icon/arrow.svg" alt=""></button>
+            <button class="buttonLeft" onclick="esquerda()"><img src="icon/arrow.svg" alt="Seta Esquerda"></button>
 
             <div class="container-slider">
-                <div class="slider">
-                    <img id="image1" src="" alt="">
-
+                <div class="slider active"> <img id="imageDes" src="" alt="">
                     <div>
-                        <h1 id="title1" style="margin-left: 20px;"></h1>
-                        <p id="text1">
-                            <!-- CONTEUDO TEXTUAL-->
-                        </p>
+                        <h1 id="titleDes" style="margin-left: 20px;"></h1>
+                        <p id="textDes"></p>
                     </div>
-
                 </div>
 
-                <div class="slider">
-                    <img id="image2" alt="">
-
+                <div class="slider"> <img id="imageSlider2" src="" alt="">
                     <div>
-                        <h1 id="title2" style="margin-left: 20px;"></h1>
-                        <p id="text2">
-                            <!-- CONTEUDO TEXTUAL-->
-                        </p>
+                        <h1 id="titleSlider2" style="margin-left: 20px;"></h1>
+                        <p id="textSlider2"></p>
                     </div>
-
                 </div>
 
-                <div class="slider">
-                    <img id="image3" src="" alt="">
-
+                <div class="slider"> <img id="imageSlider3" src="" alt="">
                     <div>
-                        <h1 id="title3" style="margin-left: 20px;"></h1>
-                        <p id="text3">
-                            <!-- CONTEUDO TEXTUAL-->
-                        </p>
+                        <h1 id="titleSlider3" style="margin-left: 20px;"></h1>
+                        <p id="textSlider3"></p>
                     </div>
-
                 </div>
             </div>
-            <!-- Botão direito -->
-            <button id="buttonRight"><img src="icon/arrow.svg" alt=""></button>
+            <button class="buttonRight" onclick="direita()"><img src="icon/arrow.svg" alt="Seta Direita"></button>
         </div>
     </main>
-    <script src="index.js" defer></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

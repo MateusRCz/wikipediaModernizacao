@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Adicionado para um melhor controle do layout */
 }
 
 body {
@@ -10,20 +11,93 @@ body {
 header{
     display: flex;
     height: 77px;
-    width: 100%; background-color: #ffff;
+    width: 100%;
+    background-color: #ffff;
     align-items: center;
+    position: relative; /* Adicionado para posicionamento do menu */
+    z-index: 50; /* Para garantir que o header fique acima do conteúdo principal */
 }
 
 header i{
-    padding-left: 10px; color: #000000;
+    padding-left: 10px;
+    color: #000000;
+    cursor: pointer; /* Adicionado para indicar que é clicável */
 }
 
-header div{
+.principalWelcome img.logo-wiki-welcome { /* Use a nova classe */
+    position: absolute;
+    left: calc(50% - 370px); /* Centraliza e move para a esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Para ficar atrás do conteúdo da pesquisa */
+}
+
+.principalWelcome .welcome-content { /* Use a nova classe */
+    position: relative; /* Para o input aparecer */
+    z-index: 2; /* Para ficar acima do logo Wiki */
+    text-align: center;
+}
+
+.headerLogo{
     display: flex;
-    justify-content: end; 
-    width: 100%; 
-    padding-right: 40px; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.conteinerInputEnter{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: 40px;
+    gap: 15px; /* Aumentado o gap para separar o botão de "Entrar" */
+    align-items: center; /* Alinhado verticalmente */
+}
+
+.conteinerInputEnter input{
+    width: 223px;
+    height: 24px;
+    border: none;
+    padding: 0 5px; /* Adicionado padding para o texto não colar nas bordas */
+}
+
+.conteinerSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.conteinerSearch button{
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4px ;
+    border: none;
+    cursor: pointer; /* Adicionado para indicar que é clicável */
+}
+
+/* Novo estilo para o botão "Entrar" */
+.enter-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remover sublinhado do link */
+    color: #000000; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer;
     gap: 5px;
+}
+
+.enter-button h2 {
+    font-size: 1rem; /* Ajuste o tamanho da fonte se necessário */
+    margin: 0; /* Remover margem padrão do h2 */
+}
+
+.enter-button:hover {
+    color: #007bff; /* Cor ao passar o mouse */
 }
 
 .principalWelcome{
@@ -34,23 +108,21 @@ header div{
     height: 358px;
     width: 100%;
     background: linear-gradient(to right, #8E8E8E, #000000, #8E8E8E);
+    position: relative; /* Para posicionar o logo Wiki e o conteúdo */
 }
 
-.conteinerSearch{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    background-color: white;
+.principalWelcome img[src="icon/logoWiki.svg"] {
+    position: absolute;
+    left: calc(50% - 370px); /* Centraliza e move para a esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Para ficar atrás do conteúdo da pesquisa */
 }
 
-.conteinerSearch button{
-    display: flex;
-    background: transparent;
-    justify-content: center;
-    align-items: center;
-    padding-right: 4px ;
-    border: none;
+.principalWelcome > div { /* Conteiner do h1, h3 e barra de pesquisa */
+    position: relative; /* Para o input aparecer */
+    z-index: 2; /* Para ficar acima do logo Wiki */
+    text-align: center;
 }
 
 #pesquisa{
@@ -58,85 +130,139 @@ header div{
     height: 30px;
     border: none;
     margin: 4px;
+    padding: 0 10px; /* Adicionado padding */
 }
 
 .principalCategorias{
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    align-items: center; 
-    height: 91px; 
-    width: 100%; 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 91px;
+    width: 100%;
     background-color: #ffff;
+    flex-wrap: wrap; /* Permite que as categorias quebrem a linha */
+    padding: 10px 0; /* Adicionado padding para caso de quebra de linha */
 }
 
-#conteudoAparece{
-    display:flex;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-     width: 428px;
-    height: 150px;
-}
+/* Removido o estilo de #conteudoAparece pois não é usado diretamente */
 
 .principalArtigosName{
-    font-size: 24px; 
+    font-size: 24px;
     margin: 10px;
 }
 
 .principalArtigosSlider{
-    display: flex; 
-    justify-content: space-between; 
-    height: 363px; 
-    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    height: 363px;
+    width: 100%;
     background-color: #D9D9D9;
+    position: relative; /* Para o slider */
 }
 
 .container-slider{
     position: relative;
-    width: 100%;
+    width: calc(100% - 100px); /* Largura total menos os botões */
+    overflow: hidden; /* Garante que apenas um slide seja visível por vez */
 }
 
-#buttonLeft{
-    background-color: #838383; 
-    width: 50px; 
-    height: 100%; 
+.buttonLeft, .buttonRight{
+    background-color: #838383;
+    width: 50px;
+    height: 100%;
     border: none;
-    cursor: pointer
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Evita que os botões encolham */
 }
 
-#buttonRight{
-    rotate: 180deg;
-    background-color: #838383; 
-    width: 50px; 
-    height: 100%; 
-    border: none;
-    cursor: pointer
+.buttonRight{
+    transform: rotate(180deg); /* Usado transform em vez de rotate */
 }
 
 .slider{
-    display: flex; 
+    display: flex;
     padding: 20px;
     position: absolute;
-    max-height: 89%;
+    top: 0;
+    left: 0;
     width: 100%;
-    opacity: 0;
-    transition: opacity .1s; 
+    height: 100%;
+    opacity: 0; /* Começa invisível */
+    transition: opacity .5s ease-in-out; /* Transição suave */
+    align-items: center; /* Alinha o conteúdo do slider verticalmente */
 }
 
-.on {
+.slider.active { /* Nova classe para o slide ativo */
     opacity: 1;
 }
 
+.slider img{
+    max-width: 300px; /* Limita o tamanho da imagem no slider */
+    height: auto;
+    margin-right: 20px; /* Espaçamento entre imagem e texto */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
 .slider div{
-    display: flex; 
+    display: flex;
     flex-direction: column;
+    flex: 1; /* Permite que o div de texto ocupe o espaço restante */
 }
 
 .slider p{
-    overflow-y: auto; 
-    margin-left: 50px; 
-    max-width: 901px; 
-    padding: 10px; 
-    color: #4C4C4C; 
-    font-size: 24px;
+    overflow-y: auto;
+    margin-left: 0; /* Ajustado para 0, pois o margin-right da imagem já cria espaço */
+    max-width: 100%; /* Ajustado para 100% da largura do contêiner de texto */
+    padding: 10px 0; /* Ajustado padding */
+    color: #4C4C4C;
+    font-size: 20px; /* Ajustado para caber melhor */
+    line-height: 1.5;
+}
+
+
+/* Menu Lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa; /* Um cinza claro para o fundo do menu */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+}
+
+.sidebar a {
+    padding: 15px 25px 15px 35px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #555;
+}
+
+.sidebar .closebtn:hover {
+    color: #000;
 }

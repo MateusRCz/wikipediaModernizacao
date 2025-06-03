@@ -4,63 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Artigo - Wikipedia</title>
     <link rel="stylesheet" href="artigoPage.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body style="background-color: #ffffff;">
-    <!-- Header -->
+   <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Página Inicial</a>
+    <a href="artigoPage.html">Artigos (Exemplo)</a>
+    <a href="profilePage.html">Meu Perfil</a>
+    <a href="loginPage.html">Entrar / Criar Conta</a> </div>
+
     <header>
-        <i class="fa-solid fa-bars fa-xl"></i>
+        <i class="fa-solid fa-bars fa-xl" onclick="openNav()"></i>
 
         <div class="headerLogo">
             <img src="icon/logo.svg" alt="">
-
         </div>
 
         <div class="conteinerInputEnter">
-            
             <div class="conteinerSearch">
                 <input id="pesquisa" placeholder="Pesquisar na Wikipedia" type="text">
                 <button onclick="buscar()"><img src="icon/search.svg" alt=""></button>
             </div>
 
-            <h2>Entrar</h2>
-            <img src="icon/person.svg" alt="">
+            <a href="loginPage.html" class="enter-button">
+                <h2>Entrar</h2>
+                <img src="icon/person.svg" alt="">
+            </a>
         </div>
-
     </header>
 
-    <!-- principal -->
-    <main style="height: 310px;">
-
-        <!-- Banner principal -->
-        <div class="artigoBanner">
-            <img id="image" src="" alt="">
-            <h1 id="title">teste</h1>
+    <main style="height: auto;"> <div class="artigoBanner">
+            <img id="image" src="/images/universe.jpg" >
+            <h1 id="title"></h1>
         </div>
 
-        <!-- conteudo principal -->
         <div class="principalArtigo">
 
-            <!-- Conteiner esquerdo -->
             <div class="conteinerEsquerdo">
-
+                <h3>Sumário</h3>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#impacto">Impacto Cultural</a></li>
+                </ul>
             </div>
 
-            <!-- Conteiner central -->
             <div class="conteudoArtigo">
-                <p id="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure quibusdam voluptatibus sequi
-                    libero
-                    consequatur quos animi itaque consectetur soluta distinctio temporibus eligendi est, adipisci
-                    maiores at ratione, aspernatur blanditiis accusantium.</p>
+                <p id="text">
+                    </p>
+
+                <h2 id="introducao">Introdução</h2>
+                <p>Este é um exemplo de seção de introdução. O conteúdo real virá da API da Wikipedia.</p>
+
+                <h2 id="historia">História</h2>
+                <p>Aqui você encontraria a história do tema do artigo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore. Optio dolorum voluptatum, provident omnis esse, culpa sint voluptatem distinctio similique at expedita reiciendis minus, quia ab animi et temporibus.</p>
+
+                <h2 id="caracteristicas">Características</h2>
+                <p>Detalhes e características importantes seriam listados aqui. Facere, voluptatibus vitae sapiente sit distinctio non doloremque ducimus temporibus nisi, minus ab aliquid maiores. Atque modi quasi unde pariatur ipsam rem?</p>
+
+                <h2 id="impacto">Impacto Cultural</h2>
+                <p>O impacto do artigo na cultura, sociedade, etc. Repudiandae, quasi mollitia! Atque omnis perferendis nulla veniam, iste similique provident sapiente nemo. Dolore eveniet, non dignissimos sit mollitia laudantium.</p>
             </div>
 
-            <!-- Conteiner direito -->
             <div class="conteinerDireito">
-
+                <h3>Artigos Relacionados</h3>
+                <ul>
+                    <li><a href="#">Artigo Relacionado 1</a></li>
+                    <li><a href="#">Artigo Relacionado 2</a></li>
+                    <li><a href="#">Artigo Relacionado 3</a></li>
+                </ul>
             </div>
         </div>
 

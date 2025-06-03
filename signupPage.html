@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Wikipedia</title>
+    <link rel="stylesheet" href="artigoPage.css"> <link rel="stylesheet" href="singupPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Página Inicial</a>
+        <a href="artigoPage.html">Artigos (Exemplo)</a>
+        <a href="profilePage.html">Meu Perfil</a>
+        <a href="loginPage.html">Entrar / Criar Conta</a>
+        </div>
+
+    <header>
+        <i class="fa-solid fa-bars fa-xl" onclick="openNav()"></i>
+        <div class="headerLogo">
+            <img src="icon/logo.svg" alt="">
+        </div>
+        <div class="conteinerInputEnter">
+            <div class="conteinerSearch">
+                <input id="pesquisa" placeholder="Pesquisar na Wikipedia" type="text">
+                <button onclick="buscar()"><img src="icon/search.svg" alt=""></button>
+            </div>
+            <a href="loginPage.html" class="enter-button">
+                <h2>Entrar</h2>
+                <img src="icon/person.svg" alt="">
+            </a>
+        </div>
+    </header>
+
+    <main class="signup-main">
+        <div class="signup-container">
+            <h1>Criar Nova Conta</h1>
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="new-username">Nome de Usuário:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-email">E-mail (opcional):</label>
+                    <input type="email" id="new-email" name="new-email">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Senha:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Senha:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="signup-button">Registrar</button>
+                <p class="login-link">Já tem uma conta? <a href="loginPage.html">Entrar</a></p>
+            </form>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
